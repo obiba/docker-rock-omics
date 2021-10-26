@@ -4,6 +4,7 @@
 
 docker_compose_file=docker-compose.yml
 no_cache=false
+tag=latest
 
 # Build Docker image
 build-image:
