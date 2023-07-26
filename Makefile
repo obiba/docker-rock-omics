@@ -5,6 +5,16 @@
 docker_compose_file=docker-compose.yml
 no_cache=false
 tag=latest
+name=datashield/rock-omics
+r=4.3
+
+all:
+	sudo docker build --no-cache=true -t="${name}:$(tag)-R$(r)" . && \
+		sudo docker build -t="${name}:$(tag)" . && \
+		sudo docker build -t="${name}:latest" . && \
+		sudo docker image push ${name}:$(tag)-R$(r) && \
+		sudo docker image push ${name}:$(tag) && \
+		sudo docker image push ${name}:latest
 
 # Build Docker image
 build-image:
