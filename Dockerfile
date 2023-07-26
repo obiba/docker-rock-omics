@@ -6,8 +6,7 @@
 
 FROM datashield/rock-base:latest
 
-ENV DSOMICS_VERSION 1.0.11
-# https://github.com/isglobal-brge/dsOmics/issues/24
+ENV DSOMICS_VERSION v1.0.18-2
 
 ENV ROCK_LIB /var/lib/rock/R/library
 
